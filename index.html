@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Télécharger AKÉMA</title>
+<meta name="description" content="Téléchargez AKÉMA pour Windows, Mac avec puce Apple ou Mac Intel.">
+<meta property="og:title" content="Télécharger AKÉMA">
+<meta property="og:description" content="Installateurs pour Windows, Mac avec puce Apple et Mac Intel.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#F3F5F7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E1726" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2315233B'/%3E%3Cpath d='M5 21c3 0 4-5 7-5s3 3 5 3 3-12 6-12 3 14 4 14' fill='none' stroke='%2347C389' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper:    #F3F5F7;
+    --surface:  #FFFFFF;
+    --ink:      #15233B;
+    --muted:    #59677A;
+    --rule:     #D6DDE5;
+    --corridor: #DDE3EA;
+    --left:     #CC3D33;
+    --right:    #1F8C56;
+    --focus:    #2F6FDB;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper:    #0E1726;
+      --surface:  #142034;
+      --ink:      #E8EDF4;
+      --muted:    #9AA6B7;
+      --rule:     #26354B;
+      --corridor: #22324A;
+      --left:     #F06A5E;
+      --right:    #4AC48A;
+      --focus:    #7FA8F5;
+      color-scheme: dark;
+    }
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Schibsted Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 1.0625rem;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+  .sr-only {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+  }
+  :focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; border-radius: 6px; }
+
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+  @media (min-width: 720px) { .wrap { padding: 0 32px; } }
+
+  /* En-tête */
+  .top { display: flex; justify-content: space-between; align-items: center; padding: 22px 0; }
+  .mark { font-weight: 800; font-size: 1.05rem; letter-spacing: .06em; text-decoration: none; }
+  .top-link {
+    font-size: .95rem; color: var(--muted); text-decoration: none;
+    border-bottom: 1px solid var(--rule); padding-bottom: 1px;
+  }
+  .top-link:hover { color: var(--ink); border-color: var(--ink); }
+
+  /* Haut de page */
+  .hero { display: grid; gap: 48px; padding: 28px 0 64px; }
+  @media (min-width: 960px) {
+    .hero {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 64px; align-items: center; padding: 56px 0 96px;
+    }
+  }
+  h1 {
+    font-size: clamp(2.5rem, 5.2vw, 4.1rem);
+    line-height: 1.02; letter-spacing: -.03em; font-weight: 700;
+    margin: 0 0 20px;
+  }
+  .lede { font-size: 1.15rem; color: var(--muted); max-width: 32em; margin: 0 0 8px; }
+  .release { font-size: .95rem; color: var(--muted); margin: 0 0 32px; font-variant-numeric: tabular-nums; }
+  .release strong { color: var(--ink); font-weight: 600; }
+
+  /* Liste des installateurs */
+  .downloads { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--rule); }
+  .downloads li { border-bottom: 1px solid var(--rule); }
+  .dl {
+    display: grid;
+    grid-template-columns: 44px minmax(0, 1fr) auto auto;
+    align-items: center; gap: 16px;
+    padding: 16px 0;
+    text-decoration: none;
+  }
+  .ico {
+    width: 44px; height: 44px; display: grid; place-items: center;
+    border: 1px solid var(--rule); border-radius: 10px;
+    background: var(--surface); color: var(--ink);
+  }
+  .name { display: block; font-weight: 600; font-size: 1.08rem; line-height: 1.3; }
+  .detail { display: block; font-size: .93rem; color: var(--muted); line-height: 1.4; }
+  .meta {
+    text-align: right; white-space: nowrap;
+    font-size: .875rem; line-height: 1.35; color: var(--muted);
+    font-variant-numeric: tabular-nums;
+  }
+  .go {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 9px 16px 9px 14px; border-radius: 999px;
+    border: 1px solid var(--ink);
+    font-weight: 600; font-size: .95rem; white-space: nowrap;
+    transition: background-color .15s ease, color .15s ease;
+  }
+  .go svg { transition: transform .15s ease; }
+  .dl:hover .go, .dl:focus-visible .go { background: var(--ink); color: var(--paper); }
+  .dl:hover .go svg { transform: translateY(2px); }
+  .dl:focus-visible { outline-offset: 6px; }
+  .dl.is-missing { pointer-events: none; }
+  .dl.is-missing .go { border-color: var(--rule); color: var(--muted); }
+  .dl.is-missing .go svg { display: none; }
+
+  @media (max-width: 560px) {
+    .dl { grid-template-columns: 44px minmax(0, 1fr) auto; gap: 14px; }
+    .meta { display: none; }
+    .go { padding: 0; width: 42px; height: 42px; justify-content: center; }
+    .go .go-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+    .dl.is-missing .go { width: auto; padding: 0 12px; font-size: .85rem; }
+    .dl.is-missing .go .go-label { position: static; width: auto; height: auto; clip: auto; }
+  }
+
+  /* Aide : quel Mac ? */
+  .mac-help { margin-top: 18px; }
+  .mac-help summary {
+    display: inline-flex; align-items: center; gap: 8px;
+    cursor: pointer; list-style: none;
+    font-size: .95rem; color: var(--muted);
+  }
+  .mac-help summary::-webkit-details-marker { display: none; }
+  .mac-help summary:hover { color: var(--ink); }
+  .mac-help summary svg { transition: transform .2s ease; }
+  .mac-help[open] summary svg { transform: rotate(45deg); }
+  .mac-help-body { padding-top: 14px; }
+  .mac-help-body p { margin: 0 0 14px; font-size: .95rem; color: var(--muted); max-width: 36em; }
+  .about { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  @media (max-width: 420px) { .about { grid-template-columns: 1fr; } }
+  .about-card {
+    background: var(--surface); border: 1px solid var(--rule); border-radius: 12px;
+    padding: 12px 14px;
+  }
+  .about-line { display: flex; gap: 12px; font-size: .93rem; padding-bottom: 10px; border-bottom: 1px dashed var(--rule); }
+  .about-line .k { color: var(--muted); min-width: 5.6em; }
+  .about-line .v { font-weight: 600; }
+  .about-card .res { font-size: .9rem; margin: 10px 0 0; color: var(--muted); }
+  .about-card .res strong { color: var(--ink); font-weight: 600; }
+  @media (prefers-reduced-motion: no-preference) {
+    .mac-help[open] .mac-help-body { animation: reveal .22s ease-out; }
+  }
+  @keyframes reveal { from { opacity: 0; transform: translateY(-4px); } }
+
+  /* Visuel : courbe de flexion du genou */
+  .figure {
+    margin: 0; background: var(--surface);
+    border: 1px solid var(--rule); border-radius: 18px;
+    padding: 24px 20px 16px;
+  }
+  .figure svg { display: block; width: 100%; height: auto; overflow: visible; }
+  .gridline { stroke: var(--rule); stroke-width: 1; }
+  .toeoff { stroke: var(--muted); stroke-width: 1; stroke-dasharray: 3 5; opacity: .55; }
+  .ax { fill: var(--muted); font-size: 16px; font-variant-numeric: tabular-nums; }
+  .phase { fill: var(--muted); font-size: 16px; }
+  .band { fill: var(--corridor); }
+  .curve { fill: none; stroke-width: 3.25; stroke-linecap: round; stroke-linejoin: round; }
+  .curve-l { stroke: var(--left); }
+  .curve-r { stroke: var(--right); }
+  .lab { font-size: 17px; font-weight: 600; }
+  @media (max-width: 560px) {
+    .ax, .phase { font-size: 21px; }
+    .lab { font-size: 21px; }
+    .curve { stroke-width: 4; }
+  }
+  .lab-l { fill: var(--left); }
+  .lab-r { fill: var(--right); }
+  .figure figcaption {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px;
+    margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--rule);
+    font-size: .875rem; color: var(--muted);
+  }
+  .swatch { display: inline-block; width: 18px; height: 10px; border-radius: 3px; background: var(--corridor); margin-right: 6px; vertical-align: -1px; }
+  @media (prefers-reduced-motion: no-preference) {
+    .band  { opacity: 0; animation: fade .7s ease .1s forwards; }
+    .curve { stroke-dasharray: 1; stroke-dashoffset: 1; animation: draw 1.9s cubic-bezier(.45, .05, .25, 1) .35s forwards; }
+    .curve-l { animation-delay: .6s; }
+    .lab   { opacity: 0; animation: fade .5s ease 2.3s forwards; }
+  }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
+  @keyframes fade { to { opacity: 1; } }
+
+  /* Premier lancement */
+  .first-run { border-top: 1px solid var(--rule); padding: 56px 0 64px; }
+  .first-run h2 { font-size: clamp(1.45rem, 2.6vw, 1.8rem); letter-spacing: -.015em; line-height: 1.2; font-weight: 600; margin: 0 0 8px; }
+  .first-run > p { color: var(--muted); max-width: 40em; margin: 0 0 32px; }
+  .os-steps { display: grid; gap: 32px; }
+  @media (min-width: 720px) { .os-steps { grid-template-columns: 1fr 1fr; gap: 56px; } }
+  .os-steps h3 { font-size: 1.08rem; font-weight: 600; margin: 0 0 12px; }
+  .os-steps ol { list-style: none; counter-reset: step; margin: 0; padding: 0; }
+  .os-steps li {
+    counter-increment: step; position: relative;
+    padding: 0 0 14px 40px; max-width: 34em;
+  }
+  .os-steps li::before {
+    content: counter(step);
+    position: absolute; left: 0; top: 0;
+    width: 26px; height: 26px; border-radius: 50%;
+    border: 1px solid var(--rule); background: var(--surface);
+    display: grid; place-items: center;
+    font-size: .8rem; font-weight: 600; line-height: 1;
+  }
+  .ui { font-weight: 600; }
+
+  /* Pied de page */
+  footer { border-top: 1px solid var(--rule); padding: 24px 0 40px; font-size: .9rem; color: var(--muted); }
+  footer a { text-decoration: none; border-bottom: 1px solid var(--rule); }
+  footer a:hover { color: var(--ink); border-color: var(--ink); }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="top">
+    <a class="mark" href="./">AKÉMA</a>
+    <a class="top-link" id="notes-link" href="#">Notes de version</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <h1>Télécharger AKÉMA</h1>
+        <p class="lede">Application de bureau pour gérer les dossiers d'analyse quantifiée de la marche, connectée à votre projet REDCap.</p>
+        <p class="release" id="release">Dernière version</p>
+
+        <h2 class="sr-only">Choisissez votre installateur</h2>
+        <ul class="downloads">
+          <li>
+            <a class="dl" data-file="windows" href="#">
+              <span class="ico" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2.75" y="4" width="18.5" height="12" rx="1.6"/><path d="M12 16v4M8 20h8"/></svg>
+              </span>
+              <span>
+                <span class="name">Windows</span>
+                <span class="detail">Windows 10 ou 11, 64 bits</span>
+              </span>
+              <span class="meta size"></span>
+              <span class="go"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10.5l5 5 5-5M5 20h14"/></svg><span class="go-label">Télécharger</span></span>
+            </a>
+          </li>
+          <li>
+            <a class="dl" data-file="macArm" href="#">
+              <span class="ico" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="10.5" rx="1.6"/><path d="M2 18.5h20"/><rect x="10" y="8.25" width="4" height="4" rx=".6"/></svg>
+              </span>
+              <span>
+                <span class="name">Mac à puce Apple</span>
+                <span class="detail">M1, M2, M3, M4 et suivants</span>
+              </span>
+              <span class="meta size"></span>
+              <span class="go"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10.5l5 5 5-5M5 20h14"/></svg><span class="go-label">Télécharger</span></span>
+            </a>
+          </li>
+          <li>
+            <a class="dl" data-file="macIntel" href="#">
+              <span class="ico" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="10.5" rx="1.6"/><path d="M2 18.5h20"/></svg>
+              </span>
+              <span>
+                <span class="name">Mac à processeur Intel</span>
+                <span class="detail">Core i5, i7, i9 et Xeon</span>
+              </span>
+              <span class="meta size"></span>
+              <span class="go"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10.5l5 5 5-5M5 20h14"/></svg><span class="go-label">Télécharger</span></span>
+            </a>
+          </li>
+        </ul>
+
+        <details class="mac-help">
+          <summary>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+            Quel Mac avez-vous ?
+          </summary>
+          <div class="mac-help-body">
+            <p>Ouvrez le menu Pomme, en haut à gauche de l'écran, puis choisissez <span class="ui">À propos de ce Mac</span>. La première ligne vous indique la version à prendre.</p>
+            <div class="about">
+              <div class="about-card">
+                <div class="about-line"><span class="k">Puce</span><span class="v">Apple M2</span></div>
+                <p class="res">Prenez <strong>Mac à puce Apple</strong></p>
+              </div>
+              <div class="about-card">
+                <div class="about-line"><span class="k">Processeur</span><span class="v">Intel Core i5</span></div>
+                <p class="res">Prenez <strong>Mac à processeur Intel</strong></p>
+              </div>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <figure class="figure">
+        <svg viewBox="0 0 640 430" role="img" aria-labelledby="fig-cap">
+          <!-- Graduations -->
+          <line class="gridline" x1="56" x2="552" y1="320.5" y2="320.5"/>
+          <text class="ax" x="44" y="326.5" text-anchor="end">0°</text>
+          <line class="gridline" x1="56" x2="552" y1="241.5" y2="241.5"/>
+          <text class="ax" x="44" y="247.5" text-anchor="end">20°</text>
+          <line class="gridline" x1="56" x2="552" y1="162.5" y2="162.5"/>
+          <text class="ax" x="44" y="168.5" text-anchor="end">40°</text>
+          <line class="gridline" x1="56" x2="552" y1="83.5" y2="83.5"/>
+          <text class="ax" x="44" y="89.5" text-anchor="end">60°</text>
+          <text class="ax" x="56.0" y="394" text-anchor="middle">0&#8239;%</text>
+          <text class="ax" x="304.0" y="394" text-anchor="middle">50&#8239;%</text>
+          <text class="ax" x="552.0" y="394" text-anchor="middle">100&#8239;%</text>
+
+          <!-- Phases du cycle : décollement des orteils vers 60 % -->
+          <line class="toeoff" x1="353.6" x2="353.6" y1="38" y2="360"/>
+          <text class="phase" x="204.8" y="26" text-anchor="middle">Appui</text>
+          <text class="phase" x="452.8" y="26" text-anchor="middle">Oscillation</text>
+
+          <!-- Couloir normatif et courbes -->
+          <path class="band" d="M56.0,281.0 L61.0,279.6 L65.9,276.5 L70.9,272.1 L75.8,266.8 L80.8,261.0 L85.8,255.2 L90.7,249.7 L95.7,244.6 L100.6,240.0 L105.6,236.1 L110.6,232.9 L115.5,230.5 L120.5,229.0 L125.4,228.5 L130.4,228.9 L135.4,230.0 L140.3,231.9 L145.3,234.2 L150.2,237.1 L155.2,240.2 L160.2,243.7 L165.1,247.2 L170.1,250.8 L175.0,254.3 L180.0,257.6 L185.0,260.6 L189.9,263.3 L194.9,265.8 L199.8,268.1 L204.8,270.1 L209.8,271.9 L214.7,273.6 L219.7,275.1 L224.6,276.5 L229.6,277.8 L234.6,279.0 L239.5,280.1 L244.5,281.2 L249.4,282.3 L254.4,283.3 L259.4,284.4 L264.3,285.3 L269.3,285.9 L274.2,286.1 L279.2,285.7 L284.2,284.4 L289.1,282.3 L294.1,279.1 L299.0,274.6 L304.0,268.7 L309.0,261.3 L313.9,252.6 L318.9,242.6 L323.8,231.6 L328.8,219.8 L333.8,207.3 L338.7,194.4 L343.7,181.2 L348.6,167.9 L353.6,154.6 L358.6,141.6 L363.5,129.0 L368.5,116.9 L373.4,105.5 L378.4,94.9 L383.4,85.3 L388.3,76.7 L393.3,69.2 L398.2,63.0 L403.2,58.1 L408.2,54.6 L413.1,52.5 L418.1,52.0 L423.0,53.1 L428.0,55.7 L433.0,59.7 L437.9,65.0 L442.9,71.6 L447.8,79.3 L452.8,88.0 L457.8,97.7 L462.7,108.2 L467.7,119.5 L472.6,131.4 L477.6,143.7 L482.6,156.4 L487.5,169.2 L492.5,182.0 L497.4,194.7 L502.4,207.1 L507.4,219.1 L512.3,230.5 L517.3,241.2 L522.2,251.0 L527.2,259.7 L532.2,267.2 L537.1,273.2 L542.1,277.7 L547.0,280.3 L552.0,281.0 L552.0,328.4 L547.0,328.4 L542.1,326.5 L537.1,322.9 L532.2,317.6 L527.2,310.9 L522.2,303.0 L517.3,294.0 L512.3,284.1 L507.4,273.5 L502.4,262.4 L497.4,250.8 L492.5,238.9 L487.5,226.9 L482.6,214.8 L477.6,202.9 L472.6,191.3 L467.7,180.0 L462.7,169.4 L457.8,159.3 L452.8,150.1 L447.8,141.8 L442.9,134.4 L437.9,128.0 L433.0,122.8 L428.0,118.9 L423.0,116.2 L418.1,115.0 L413.1,115.3 L408.2,117.0 L403.2,120.1 L398.2,124.5 L393.3,130.2 L388.3,137.0 L383.4,144.9 L378.4,153.9 L373.4,163.8 L368.5,174.5 L363.5,185.8 L358.6,197.7 L353.6,209.9 L348.6,222.4 L343.7,235.0 L338.7,247.5 L333.8,259.7 L328.8,271.4 L323.8,282.6 L318.9,292.9 L313.9,302.1 L309.0,310.2 L304.0,317.0 L299.0,322.2 L294.1,326.1 L289.1,328.7 L284.2,330.3 L279.2,330.9 L274.2,330.8 L269.3,330.1 L264.3,329.0 L259.4,327.6 L254.4,326.1 L249.4,324.6 L244.5,323.1 L239.5,321.6 L234.6,320.1 L229.6,318.6 L224.6,317.0 L219.7,315.3 L214.7,313.5 L209.8,311.6 L204.8,309.6 L199.8,307.4 L194.9,305.0 L189.9,302.4 L185.0,299.6 L180.0,296.5 L175.0,293.2 L170.1,289.7 L165.1,286.2 L160.2,282.7 L155.2,279.4 L150.2,276.4 L145.3,273.7 L140.3,271.5 L135.4,269.9 L130.4,269.0 L125.4,268.9 L120.5,269.8 L115.5,271.6 L110.6,274.3 L105.6,277.9 L100.6,282.3 L95.7,287.3 L90.7,292.8 L85.8,298.9 L80.8,305.3 L75.8,311.6 L70.9,317.5 L65.9,322.6 L61.0,326.3 L56.0,328.4 Z"/>
+          <path class="curve curve-r" pathLength="1" d="M56.0,288.9 L61.0,288.4 L65.9,286.6 L70.9,283.7 L75.8,279.9 L80.8,275.3 L85.8,270.4 L90.7,265.2 L95.7,260.0 L100.6,255.0 L105.6,250.2 L110.6,246.0 L115.5,242.3 L120.5,239.5 L125.4,237.6 L130.4,236.7 L135.4,236.8 L140.3,237.8 L145.3,239.5 L150.2,241.8 L155.2,244.7 L160.2,247.9 L165.1,251.4 L170.1,255.1 L175.0,258.9 L180.0,262.5 L185.0,266.0 L189.9,269.1 L194.9,271.9 L199.8,274.3 L204.8,276.3 L209.8,278.1 L214.7,279.6 L219.7,280.8 L224.6,281.9 L229.6,282.8 L234.6,283.7 L239.5,284.5 L244.5,285.2 L249.4,286.0 L254.4,286.9 L259.4,287.8 L264.3,288.9 L269.3,290.1 L274.2,291.4 L279.2,292.4 L284.2,293.0 L289.1,293.0 L294.1,292.2 L299.0,290.4 L304.0,287.4 L309.0,283.0 L313.9,277.1 L318.9,269.4 L323.8,260.2 L328.8,249.8 L333.8,238.5 L338.7,226.5 L343.7,214.2 L348.6,201.9 L353.6,189.8 L358.6,178.3 L363.5,167.5 L368.5,157.6 L373.4,148.4 L378.4,140.0 L383.4,132.3 L388.3,125.3 L393.3,119.1 L398.2,113.5 L403.2,108.6 L408.2,104.7 L413.1,101.7 L418.1,99.7 L423.0,98.9 L428.0,99.3 L433.0,101.0 L437.9,104.0 L442.9,108.2 L447.8,113.5 L452.8,119.9 L457.8,127.3 L462.7,135.6 L467.7,144.7 L472.6,154.6 L477.6,165.2 L482.6,176.3 L487.5,187.8 L492.5,199.4 L497.4,211.0 L502.4,222.4 L507.4,233.4 L512.3,243.7 L517.3,253.3 L522.2,262.0 L527.2,269.6 L532.2,276.1 L537.1,281.4 L542.1,285.3 L547.0,287.8 L552.0,288.9"/>
+          <path class="curve curve-l" pathLength="1" d="M56.0,257.3 L61.0,259.6 L65.9,260.1 L70.9,259.2 L75.8,257.1 L80.8,254.0 L85.8,250.3 L90.7,246.1 L95.7,241.8 L100.6,237.5 L105.6,233.6 L110.6,230.3 L115.5,227.5 L120.5,225.3 L125.4,223.6 L130.4,222.4 L135.4,221.8 L140.3,221.5 L145.3,221.7 L150.2,222.3 L155.2,223.2 L160.2,224.4 L165.1,225.9 L170.1,227.7 L175.0,229.6 L180.0,231.7 L185.0,233.9 L189.9,236.2 L194.9,238.6 L199.8,241.0 L204.8,243.3 L209.8,245.6 L214.7,247.8 L219.7,249.8 L224.6,251.7 L229.6,253.3 L234.6,254.8 L239.5,255.9 L244.5,256.9 L249.4,257.5 L254.4,258.0 L259.4,258.2 L264.3,258.1 L269.3,257.9 L274.2,257.4 L279.2,256.6 L284.2,255.6 L289.1,254.4 L294.1,253.0 L299.0,251.3 L304.0,249.4 L309.0,247.3 L313.9,244.9 L318.9,242.4 L323.8,239.7 L328.8,236.9 L333.8,233.9 L338.7,230.8 L343.7,227.5 L348.6,224.2 L353.6,220.8 L358.6,217.3 L363.5,213.8 L368.5,210.3 L373.4,206.8 L378.4,203.2 L383.4,199.6 L388.3,196.1 L393.3,192.5 L398.2,188.9 L403.2,185.4 L408.2,181.8 L413.1,178.3 L418.1,174.8 L423.0,171.4 L428.0,168.3 L433.0,165.4 L437.9,162.8 L442.9,160.7 L447.8,159.2 L452.8,158.2 L457.8,158.0 L462.7,158.6 L467.7,160.0 L472.6,162.2 L477.6,165.2 L482.6,168.9 L487.5,173.3 L492.5,178.4 L497.4,184.0 L502.4,190.2 L507.4,196.8 L512.3,203.8 L517.3,211.1 L522.2,218.6 L527.2,226.1 L532.2,233.6 L537.1,240.9 L542.1,247.6 L547.0,253.2 L552.0,257.3"/>
+          <text class="lab lab-l" x="562" y="263.3">Gauche</text>
+          <text class="lab lab-r" x="562" y="294.9">Droite</text>
+        </svg>
+        <figcaption id="fig-cap">
+          <span>Flexion du genou sur un cycle de marche, exemple illustratif.</span>
+          <span><span class="swatch" aria-hidden="true"></span>Valeurs de référence</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- Supprimez cette section si vos installateurs sont signés (Windows) et notariés (macOS). -->
+    <section class="first-run">
+      <h2>Si l'ouverture est bloquée</h2>
+      <p>Au premier lancement, Windows ou macOS peuvent demander une confirmation avant d'ouvrir l'application.</p>
+      <div class="os-steps">
+        <div>
+          <h3>Windows</h3>
+          <ol>
+            <li>Si le message <span class="ui">Windows a protégé votre ordinateur</span> apparaît, cliquez sur <span class="ui">Informations complémentaires</span>.</li>
+            <li>Cliquez sur <span class="ui">Exécuter quand même</span>, puis suivez l'installateur.</li>
+          </ol>
+        </div>
+        <div>
+          <h3>macOS</h3>
+          <ol>
+            <li>Ouvrez le fichier .dmg et glissez AKÉMA dans le dossier <span class="ui">Applications</span>.</li>
+            <li>Lancez AKÉMA une première fois. Si macOS refuse de l'ouvrir, fermez le message.</li>
+            <li>Ouvrez <span class="ui">Réglages Système</span>, puis <span class="ui">Confidentialité et sécurité</span>. En bas de la page, cliquez sur <span class="ui">Ouvrir quand même</span>.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a id="all-link" href="#">Voir toutes les versions sur GitHub</a>
+  </footer>
+</div>
+
+<script>
+  /* ------------------------------------------------------------------
+     Configuration
+     - owner / repo : laissez vides si cette page est publiée avec GitHub Pages
+       dans le même dépôt que vos releases (adresse <compte>.github.io/<repo>/).
+       Sinon, renseignez-les.
+     - files : noms EXACTS des fichiers attachés à chaque release.
+       Ils ne doivent pas contenir le numéro de version, pour que les liens
+       pointent toujours vers la dernière release.
+     ------------------------------------------------------------------ */
+  const CONFIG = {
+    owner: "",
+    repo: "",
+    files: {
+      windows:  "AKEMA-Windows.exe",
+      macArm:   "AKEMA-macOS-AppleSilicon.dmg",
+      macIntel: "AKEMA-macOS-Intel.dmg",
+    },
+  };
+
+  (function () {
+    let { owner, repo } = CONFIG;
+    const host = location.hostname;
+    if ((!owner || !repo) && host.endsWith(".github.io")) {
+      owner = owner || host.slice(0, -".github.io".length);
+      const first = location.pathname.split("/").filter(Boolean)[0];
+      repo = repo || (first && !first.includes(".") ? first : host);
+    }
+    owner = owner || "votre-compte";
+    repo  = repo  || "votre-depot";
+
+    const base = `https://github.com/${owner}/${repo}`;
+    document.getElementById("notes-link").href = `${base}/releases/latest`;
+    document.getElementById("all-link").href   = `${base}/releases`;
+
+    const rows = document.querySelectorAll(".dl[data-file]");
+    rows.forEach((a) => {
+      a.href = `${base}/releases/latest/download/${CONFIG.files[a.dataset.file]}`;
+    });
+
+    // Version, date et tailles depuis l'API GitHub (facultatif : la page fonctionne sans).
+    fetch(`https://api.github.com/repos/${owner}/${repo}/releases/latest`, {
+      headers: { Accept: "application/vnd.github+json" },
+    })
+      .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
+      .then((rel) => {
+        const version = String(rel.tag_name || "").replace(/^v/i, "");
+        const date = rel.published_at
+          ? new Date(rel.published_at).toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" })
+          : "";
+        const release = document.getElementById("release");
+        release.textContent = "";
+        const strong = document.createElement("strong");
+        strong.textContent = `Version ${version}`;
+        release.append(strong, date ? `, publiée le ${date}` : "");
+        if (rel.html_url) document.getElementById("notes-link").href = rel.html_url;
+
+        const fmt = new Intl.NumberFormat("fr-FR", { maximumFractionDigits: 0 });
+        rows.forEach((a) => {
+          const asset = (rel.assets || []).find((x) => x.name === CONFIG.files[a.dataset.file]);
+          if (asset) {
+            a.querySelector(".size").textContent = `${fmt.format(asset.size / 1e6)} Mo`;
+          } else {
+            a.classList.add("is-missing");
+            a.removeAttribute("href");
+            a.setAttribute("aria-disabled", "true");
+            a.querySelector(".go-label").textContent = "Indisponible";
+          }
+        });
+      })
+      .catch(() => {});
+  })();
+</script>
+</body>
+</html>
