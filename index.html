@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Télécharger AKÉMA</title>
-<meta name="description" content="Téléchargez AKÉMA pour Windows, Mac avec puce Apple ou Mac Intel.">
-<meta property="og:title" content="Télécharger AKÉMA">
+<title>Télécharger IA-QM Clinical</title>
+<meta name="description" content="Téléchargez IA-QM Clinical pour Windows, Mac avec puce Apple ou Mac Intel.">
+<meta property="og:title" content="Télécharger IA-QM Clinical">
 <meta property="og:description" content="Installateurs pour Windows, Mac avec puce Apple et Mac Intel.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#F3F5F7" media="(prefers-color-scheme: light)">
@@ -170,6 +170,8 @@
     border: 1px solid var(--rule); border-radius: 18px;
     padding: 24px 20px 16px;
   }
+  .figure-img { padding: 0; overflow: hidden; }
+  .figure-img img { display: block; width: 100%; height: auto; }
   .figure svg { display: block; width: 100%; height: auto; overflow: visible; }
   .gridline { stroke: var(--rule); stroke-width: 1; }
   .toeoff { stroke: var(--muted); stroke-width: 1; stroke-dasharray: 3 5; opacity: .55; }
@@ -234,15 +236,15 @@
 
 <div class="wrap">
   <header class="top">
-    <a class="mark" href="./">AKÉMA</a>
+    <a class="mark" href="./">IA-QM</a>
     <a class="top-link" id="notes-link" href="#">Notes de version</a>
   </header>
 
   <main>
     <section class="hero">
       <div>
-        <h1>Télécharger AKÉMA</h1>
-        <p class="lede">Application de bureau pour gérer les dossiers d'analyse quantifiée de la marche, connectée à votre projet REDCap.</p>
+        <h1>Télécharger IA-QM Clinical</h1>
+        <p class="lede">Application de bureau pour gérer les dossiers d'analyse quantifiée de la marche, les bilans de kinésitéhrapie et les indications chirurgicales, orchestrée par RedCap</p>
         <p class="release" id="release">Dernière version</p>
 
         <h2 class="sr-only">Choisissez votre installateur</h2>
@@ -309,38 +311,10 @@
         </details>
       </div>
 
-      <figure class="figure">
-        <svg viewBox="0 0 640 430" role="img" aria-labelledby="fig-cap">
-          <!-- Graduations -->
-          <line class="gridline" x1="56" x2="552" y1="320.5" y2="320.5"/>
-          <text class="ax" x="44" y="326.5" text-anchor="end">0°</text>
-          <line class="gridline" x1="56" x2="552" y1="241.5" y2="241.5"/>
-          <text class="ax" x="44" y="247.5" text-anchor="end">20°</text>
-          <line class="gridline" x1="56" x2="552" y1="162.5" y2="162.5"/>
-          <text class="ax" x="44" y="168.5" text-anchor="end">40°</text>
-          <line class="gridline" x1="56" x2="552" y1="83.5" y2="83.5"/>
-          <text class="ax" x="44" y="89.5" text-anchor="end">60°</text>
-          <text class="ax" x="56.0" y="394" text-anchor="middle">0&#8239;%</text>
-          <text class="ax" x="304.0" y="394" text-anchor="middle">50&#8239;%</text>
-          <text class="ax" x="552.0" y="394" text-anchor="middle">100&#8239;%</text>
-
-          <!-- Phases du cycle : décollement des orteils vers 60 % -->
-          <line class="toeoff" x1="353.6" x2="353.6" y1="38" y2="360"/>
-          <text class="phase" x="204.8" y="26" text-anchor="middle">Appui</text>
-          <text class="phase" x="452.8" y="26" text-anchor="middle">Oscillation</text>
-
-          <!-- Couloir normatif et courbes -->
-          <path class="band" d="M56.0,281.0 L61.0,279.6 L65.9,276.5 L70.9,272.1 L75.8,266.8 L80.8,261.0 L85.8,255.2 L90.7,249.7 L95.7,244.6 L100.6,240.0 L105.6,236.1 L110.6,232.9 L115.5,230.5 L120.5,229.0 L125.4,228.5 L130.4,228.9 L135.4,230.0 L140.3,231.9 L145.3,234.2 L150.2,237.1 L155.2,240.2 L160.2,243.7 L165.1,247.2 L170.1,250.8 L175.0,254.3 L180.0,257.6 L185.0,260.6 L189.9,263.3 L194.9,265.8 L199.8,268.1 L204.8,270.1 L209.8,271.9 L214.7,273.6 L219.7,275.1 L224.6,276.5 L229.6,277.8 L234.6,279.0 L239.5,280.1 L244.5,281.2 L249.4,282.3 L254.4,283.3 L259.4,284.4 L264.3,285.3 L269.3,285.9 L274.2,286.1 L279.2,285.7 L284.2,284.4 L289.1,282.3 L294.1,279.1 L299.0,274.6 L304.0,268.7 L309.0,261.3 L313.9,252.6 L318.9,242.6 L323.8,231.6 L328.8,219.8 L333.8,207.3 L338.7,194.4 L343.7,181.2 L348.6,167.9 L353.6,154.6 L358.6,141.6 L363.5,129.0 L368.5,116.9 L373.4,105.5 L378.4,94.9 L383.4,85.3 L388.3,76.7 L393.3,69.2 L398.2,63.0 L403.2,58.1 L408.2,54.6 L413.1,52.5 L418.1,52.0 L423.0,53.1 L428.0,55.7 L433.0,59.7 L437.9,65.0 L442.9,71.6 L447.8,79.3 L452.8,88.0 L457.8,97.7 L462.7,108.2 L467.7,119.5 L472.6,131.4 L477.6,143.7 L482.6,156.4 L487.5,169.2 L492.5,182.0 L497.4,194.7 L502.4,207.1 L507.4,219.1 L512.3,230.5 L517.3,241.2 L522.2,251.0 L527.2,259.7 L532.2,267.2 L537.1,273.2 L542.1,277.7 L547.0,280.3 L552.0,281.0 L552.0,328.4 L547.0,328.4 L542.1,326.5 L537.1,322.9 L532.2,317.6 L527.2,310.9 L522.2,303.0 L517.3,294.0 L512.3,284.1 L507.4,273.5 L502.4,262.4 L497.4,250.8 L492.5,238.9 L487.5,226.9 L482.6,214.8 L477.6,202.9 L472.6,191.3 L467.7,180.0 L462.7,169.4 L457.8,159.3 L452.8,150.1 L447.8,141.8 L442.9,134.4 L437.9,128.0 L433.0,122.8 L428.0,118.9 L423.0,116.2 L418.1,115.0 L413.1,115.3 L408.2,117.0 L403.2,120.1 L398.2,124.5 L393.3,130.2 L388.3,137.0 L383.4,144.9 L378.4,153.9 L373.4,163.8 L368.5,174.5 L363.5,185.8 L358.6,197.7 L353.6,209.9 L348.6,222.4 L343.7,235.0 L338.7,247.5 L333.8,259.7 L328.8,271.4 L323.8,282.6 L318.9,292.9 L313.9,302.1 L309.0,310.2 L304.0,317.0 L299.0,322.2 L294.1,326.1 L289.1,328.7 L284.2,330.3 L279.2,330.9 L274.2,330.8 L269.3,330.1 L264.3,329.0 L259.4,327.6 L254.4,326.1 L249.4,324.6 L244.5,323.1 L239.5,321.6 L234.6,320.1 L229.6,318.6 L224.6,317.0 L219.7,315.3 L214.7,313.5 L209.8,311.6 L204.8,309.6 L199.8,307.4 L194.9,305.0 L189.9,302.4 L185.0,299.6 L180.0,296.5 L175.0,293.2 L170.1,289.7 L165.1,286.2 L160.2,282.7 L155.2,279.4 L150.2,276.4 L145.3,273.7 L140.3,271.5 L135.4,269.9 L130.4,269.0 L125.4,268.9 L120.5,269.8 L115.5,271.6 L110.6,274.3 L105.6,277.9 L100.6,282.3 L95.7,287.3 L90.7,292.8 L85.8,298.9 L80.8,305.3 L75.8,311.6 L70.9,317.5 L65.9,322.6 L61.0,326.3 L56.0,328.4 Z"/>
-          <path class="curve curve-r" pathLength="1" d="M56.0,288.9 L61.0,288.4 L65.9,286.6 L70.9,283.7 L75.8,279.9 L80.8,275.3 L85.8,270.4 L90.7,265.2 L95.7,260.0 L100.6,255.0 L105.6,250.2 L110.6,246.0 L115.5,242.3 L120.5,239.5 L125.4,237.6 L130.4,236.7 L135.4,236.8 L140.3,237.8 L145.3,239.5 L150.2,241.8 L155.2,244.7 L160.2,247.9 L165.1,251.4 L170.1,255.1 L175.0,258.9 L180.0,262.5 L185.0,266.0 L189.9,269.1 L194.9,271.9 L199.8,274.3 L204.8,276.3 L209.8,278.1 L214.7,279.6 L219.7,280.8 L224.6,281.9 L229.6,282.8 L234.6,283.7 L239.5,284.5 L244.5,285.2 L249.4,286.0 L254.4,286.9 L259.4,287.8 L264.3,288.9 L269.3,290.1 L274.2,291.4 L279.2,292.4 L284.2,293.0 L289.1,293.0 L294.1,292.2 L299.0,290.4 L304.0,287.4 L309.0,283.0 L313.9,277.1 L318.9,269.4 L323.8,260.2 L328.8,249.8 L333.8,238.5 L338.7,226.5 L343.7,214.2 L348.6,201.9 L353.6,189.8 L358.6,178.3 L363.5,167.5 L368.5,157.6 L373.4,148.4 L378.4,140.0 L383.4,132.3 L388.3,125.3 L393.3,119.1 L398.2,113.5 L403.2,108.6 L408.2,104.7 L413.1,101.7 L418.1,99.7 L423.0,98.9 L428.0,99.3 L433.0,101.0 L437.9,104.0 L442.9,108.2 L447.8,113.5 L452.8,119.9 L457.8,127.3 L462.7,135.6 L467.7,144.7 L472.6,154.6 L477.6,165.2 L482.6,176.3 L487.5,187.8 L492.5,199.4 L497.4,211.0 L502.4,222.4 L507.4,233.4 L512.3,243.7 L517.3,253.3 L522.2,262.0 L527.2,269.6 L532.2,276.1 L537.1,281.4 L542.1,285.3 L547.0,287.8 L552.0,288.9"/>
-          <path class="curve curve-l" pathLength="1" d="M56.0,257.3 L61.0,259.6 L65.9,260.1 L70.9,259.2 L75.8,257.1 L80.8,254.0 L85.8,250.3 L90.7,246.1 L95.7,241.8 L100.6,237.5 L105.6,233.6 L110.6,230.3 L115.5,227.5 L120.5,225.3 L125.4,223.6 L130.4,222.4 L135.4,221.8 L140.3,221.5 L145.3,221.7 L150.2,222.3 L155.2,223.2 L160.2,224.4 L165.1,225.9 L170.1,227.7 L175.0,229.6 L180.0,231.7 L185.0,233.9 L189.9,236.2 L194.9,238.6 L199.8,241.0 L204.8,243.3 L209.8,245.6 L214.7,247.8 L219.7,249.8 L224.6,251.7 L229.6,253.3 L234.6,254.8 L239.5,255.9 L244.5,256.9 L249.4,257.5 L254.4,258.0 L259.4,258.2 L264.3,258.1 L269.3,257.9 L274.2,257.4 L279.2,256.6 L284.2,255.6 L289.1,254.4 L294.1,253.0 L299.0,251.3 L304.0,249.4 L309.0,247.3 L313.9,244.9 L318.9,242.4 L323.8,239.7 L328.8,236.9 L333.8,233.9 L338.7,230.8 L343.7,227.5 L348.6,224.2 L353.6,220.8 L358.6,217.3 L363.5,213.8 L368.5,210.3 L373.4,206.8 L378.4,203.2 L383.4,199.6 L388.3,196.1 L393.3,192.5 L398.2,188.9 L403.2,185.4 L408.2,181.8 L413.1,178.3 L418.1,174.8 L423.0,171.4 L428.0,168.3 L433.0,165.4 L437.9,162.8 L442.9,160.7 L447.8,159.2 L452.8,158.2 L457.8,158.0 L462.7,158.6 L467.7,160.0 L472.6,162.2 L477.6,165.2 L482.6,168.9 L487.5,173.3 L492.5,178.4 L497.4,184.0 L502.4,190.2 L507.4,196.8 L512.3,203.8 L517.3,211.1 L522.2,218.6 L527.2,226.1 L532.2,233.6 L537.1,240.9 L542.1,247.6 L547.0,253.2 L552.0,257.3"/>
-          <text class="lab lab-l" x="562" y="263.3">Gauche</text>
-          <text class="lab lab-r" x="562" y="294.9">Droite</text>
-        </svg>
-        <figcaption id="fig-cap">
-          <span>Flexion du genou sur un cycle de marche, exemple illustratif.</span>
-          <span><span class="swatch" aria-hidden="true"></span>Valeurs de référence</span>
-        </figcaption>
+      <figure class="figure figure-img">
+        <img src="Logo.png" alt="Icône d'IA-QM Clinical">
       </figure>
+
     </section>
 
     <!-- Supprimez cette section si vos installateurs sont signés (Windows) et notariés (macOS). -->
@@ -358,8 +332,8 @@
         <div>
           <h3>macOS</h3>
           <ol>
-            <li>Ouvrez le fichier .dmg et glissez AKÉMA dans le dossier <span class="ui">Applications</span>.</li>
-            <li>Lancez AKÉMA une première fois. Si macOS refuse de l'ouvrir, fermez le message.</li>
+            <li>Ouvrez le fichier .dmg et glissez IA-QM Clinical dans le dossier <span class="ui">Applications</span>.</li>
+            <li>Lancez IA-QM Clinical une première fois. Si macOS refuse de l'ouvrir, fermez le message.</li>
             <li>Ouvrez <span class="ui">Réglages Système</span>, puis <span class="ui">Confidentialité et sécurité</span>. En bas de la page, cliquez sur <span class="ui">Ouvrir quand même</span>.</li>
           </ol>
         </div>
@@ -386,9 +360,9 @@
     owner: "",
     repo: "",
     files: {
-      windows:  "AKEMA-Windows.exe",
-      macArm:   "AKEMA-macOS-AppleSilicon.dmg",
-      macIntel: "AKEMA-macOS-Intel.dmg",
+      windows:  "IAQM-Clinical-Windows.exe",
+      macArm:   "IAQM-Clinical-macOS-AppleSilicon.dmg",
+      macIntel: "IAQM-Clinical-macOS-Intel.dmg",
     },
   };
 
@@ -400,8 +374,8 @@
       const first = location.pathname.split("/").filter(Boolean)[0];
       repo = repo || (first && !first.includes(".") ? first : host);
     }
-    owner = owner || "votre-compte";
-    repo  = repo  || "votre-depot";
+    owner = owner || "Khetel";
+    repo  = repo  || "IAQM-Clinical";
 
     const base = `https://github.com/${owner}/${repo}`;
     document.getElementById("notes-link").href = `${base}/releases/latest`;
